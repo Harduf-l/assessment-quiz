@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Mochiy+Pop+P+One&family=Noto+Sans&family=Source+Sans+Pro&display=swap');
+
+*{
+ direction: rtl; 
+ font-family: 'Arimo', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  margin: 0;
+  padding: 0; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background-color: #eaedf2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer {
+  background-color: #c7f0c1;
+  margin-bottom: 0; 
 }
 
-.App-link {
-  color: #61dafb;
+.checkMark{
+  color: green; 
+  font-size: 40px; 
+  font-weight: bold; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content{
+  height: 500px;
+}
+
+.prevImage {
+  width: 300px;
+  height: 300px; 
+  object-fit: cover;
+}
+
+label {
+  padding-right: 3px; 
 }
