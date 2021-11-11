@@ -33,7 +33,7 @@ function App() {
   },
   {title: "שוקולד", 
   isPicture: false,
-  question: "מהם אחוז מוצקי הקקאו בשוקולד חלב?",
+  question: "מהו אחוז מוצקי הקקאו בשוקולד חלב?",
   answers: ["39", "31", "80", "17"],
   chosenAnswer: false,
   correctAnswer: 1,
