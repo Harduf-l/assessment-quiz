@@ -38,7 +38,7 @@ function Question(props) {
   if (pictureDelay && questionObject.once)
     return (
       <div className="text-center pt-5">
-        <img className="prevImage" src={questionObject.pictrue} />
+        <img className="prevImage" src={questionObject.pictrue} alt={questionObject.title} />
       </div>
     );
 

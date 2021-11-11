@@ -28,6 +28,16 @@ footer {
   font-weight: bold; 
 }
 
+.iksMark{
+  color: #af1c1c; 
+  font-size: 30px; 
+  font-weight: bold; 
+}
+
+.bitPadding{
+  padding-left: 15px; 
+}
+
 .page-container{
   position: relative;
   min-height: 100vh;
@@ -45,4 +55,20 @@ footer {
 
 label {
   padding-right: 3px; 
+}
+
+.bold{
+  font-weight:600
+}
+
+.questionError{
+  background-color: #e5eaea; 
+}
+
+.answerMistakeError{
+  background-color: #ffd5d5; 
+}
+
+.answerCorrectError{
+  background-color: #c6eec0; 
 }

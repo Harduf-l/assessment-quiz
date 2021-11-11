@@ -33,7 +33,7 @@ function App() {
   },
   {title: "שוקולד", 
   isPicture: false,
-  question: "מהם אחוזי הקקאו בשוקולד חלב?",
+  question: "מהם אחוז מוצקי הקקאו בשוקולד חלב?",
   answers: ["39", "31", "80", "17"],
   chosenAnswer: false,
   correctAnswer: 1,
@@ -43,7 +43,7 @@ function App() {
   question: "מהו המרכיב העיקרי בחומוס, במתכונו האסלי?",
   answers: ["גרגירי חומוס", "שמן זית", "טחינה", "מים"],
   chosenAnswer: false,
-  correctAnswer: 2,
+  correctAnswer: 0,
   },
   {title: "שמש", 
   isPicture: false,
@@ -57,7 +57,7 @@ function App() {
   once: true,
   isPicture: true,
   question: "כמה אגוזים, להערכתך, הופיעו בתמונה?",
-  answers: ["15", "33", "21", "45"],
+  answers: ["18", "37", "28", "41"],
   chosenAnswer: false,
   correctAnswer: 2,
   },
@@ -90,7 +90,7 @@ function App() {
   let [chosenQuestion, setChosenQuestion] = useState(questionArray[0])
   let [gotItRight, setgotItRight] = useState(0);
   let [endGame, setEndGame] = useState(false);
-
+  let [errorsArray, setErrorObject] = useState([])
 
   let pictureFinished=()=> {
     let changeQuestionArray = [...questionArray]
@@ -126,12 +126,20 @@ function App() {
 
   let calculateEndGame = () => {
     let counter = 0; 
-
+    let errorArray = []
     questionArray.forEach(el => {
       if (el.chosenAnswer === el.correctAnswer) {
         counter++
       }
+      if (el.chosenAnswer !== el.correctAnswer) {
+        let newErrorObj = {}
+        newErrorObj.correct = el.answers[el.correctAnswer]
+        newErrorObj.mistake = el.answers[el.chosenAnswer]
+        newErrorObj.question = el.question
+        errorArray.push(newErrorObj)
+      }
     })
+    setErrorObject(errorArray)
     setgotItRight(counter)
     setEndGame(true)
   }
@@ -171,7 +179,7 @@ function App() {
       <div className="content">
       {homepage && <HomePage homepageOver={homepageOver}/>}
       {!homepage && !endGame && <Question pictureFinished={pictureFinished} questionArrayLength={questionArray.length} questionCounter={questionCounter} nextQuestion={nextQuestion} prevQuestion={prevQuestion} question={chosenQuestion}/>}
-      {endGame && <EndGame gotItRight={gotItRight} totalQuestions={questionArray.length}/>}
+      {endGame && <EndGame errorsArray={errorsArray} gotItRight={gotItRight} totalQuestions={questionArray.length}/>}
       </div>
 
     </div>
