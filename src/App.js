@@ -168,8 +168,8 @@ function App() {
         <div className="align-self-center">
         
         </div>
-        <div className="pe-3">
-          <span className="checkMark"><i className="fas fa-check"></i></span>
+        <div className="pe-3 d-flex flex-wrap">
+          <span className="homeMark pt-1"><i className="fab fa-quinscape"></i></span>
           <span className="p-3">שאלוני קוויזמי - בחרת נכון</span>
         </div>
         </div>
