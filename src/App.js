@@ -125,8 +125,6 @@ function App() {
   }
 
   let calculateEndGame = () => {
-    console.log("need to calculate end now and go to end page")
-
     let counter = 0; 
 
     questionArray.forEach(el => {
@@ -153,17 +151,18 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="page-container">
 
+    <div className="content-wrap">
       <header>
 
         <div className="d-flex flex-wrap">
         <div className="align-self-center">
         
         </div>
-        <div className="align-self-center me-auto">
+        <div className="pe-3">
           <span className="checkMark"><i className="fas fa-check"></i></span>
-          <span className="p-3">שאלוני לרר - אתה יודע שבחרת נכון</span>
+          <span className="p-3">שאלוני קוויזמי - בחרת נכון</span>
         </div>
         </div>
       </header>
@@ -175,10 +174,11 @@ function App() {
       {endGame && <EndGame gotItRight={gotItRight} totalQuestions={questionArray.length}/>}
       </div>
 
+    </div>
 
      <footer>
-       <p className="text-center">
-       שאלונים מקוריים מבית לרר
+       <p className="text-center pt-2">
+       שאלונים מקוריים מבית קוויזמי
        <br/>
        Ⓒכל הזכויות שמורות
       </p>

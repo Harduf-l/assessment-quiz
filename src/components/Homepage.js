@@ -2,12 +2,12 @@ function Homepage(props) {
 
     return (
      <div className="pt-5 text-center">
-      <div className="pt-5">
+      <div className="p-3">
         תמיד רציתם לדעת אם אתם מקוריים?
         בעלי חשיבה חדה וייחודית?
         <br/>
         <br/>
-        שאלוני לרר נוצרו בדיוק עבור המטרה הזו.
+        שאלוני קוויזמי נוצרו בדיוק עבור המטרה הזו.
         <br/>
         תמשיכו כשאתם מרגישים מוכנים...
       </div>
